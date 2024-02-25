@@ -22,7 +22,8 @@ public class MainCalculadora {
         while (!salir) {
             System.out.println("\n*** Calculadora ***");
             System.out.println("1. Sumar");
-            System.out.println("2. Salir");
+            System.out.println("2. Restar");
+            System.out.println("3. Salir");
             System.out.println("Seleccione una opción:");
 
             int opcion = scanner.nextInt();
@@ -39,7 +40,18 @@ public class MainCalculadora {
                     System.out.println("El resultado de la suma es: " + resultadoSuma);
                     break;
                 case 2:
+                    System.out.println("Ingrese el primer número:");
+                    double num1Resta = scanner.nextDouble();
+
+                    System.out.println("Ingrese el segundo número:");
+                    double num2Resta = scanner.nextDouble();
+
+                    double resultadoResta = Calculator.restar(num1Resta, num2Resta);
+                    System.out.println("El resultado de la resta es: " + resultadoResta);
+                    break;
+                case 3:
                     salir = true;
+                    System.out.println("¡Hasta luego!");
                     break;
             }
         }
